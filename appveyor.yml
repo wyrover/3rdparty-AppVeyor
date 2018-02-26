@@ -4,6 +4,10 @@ branches:
   - master  
 os: Visual Studio 2015
 
+image:
+- Visual Studio 2015
+- Visual Studio 2017
+
 clone_depth: 1
 clone_folder: C:\test_project
 
