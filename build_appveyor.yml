@@ -1,0 +1,6 @@
+version: 1.0.{build}
+clone_folder: c:\test_project
+init:
+- cmd: echo hello
+build:
+  verbosity: minimal
