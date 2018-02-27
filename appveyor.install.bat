@@ -38,4 +38,4 @@ echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
 
 
-
+7z.exe a -t7z -r qt_5_10_0_mingw53_32.7z C:\Qt\5.10.0\mingw53_32\*

@@ -1,2 +1,2 @@
-cd c:\projects\3rdparty-AppVeyor\
+echo 1111111111
 
