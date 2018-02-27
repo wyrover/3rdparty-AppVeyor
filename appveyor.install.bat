@@ -31,6 +31,8 @@ wget https://github.com/mlocati/gettext-iconv-windows/releases/download/v0.19.8.
 cmake --version
 msbuild /version
 which perl.exe
+which 7za.exe
+which 7z.exe
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
