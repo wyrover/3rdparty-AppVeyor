@@ -31,13 +31,13 @@ wget https://github.com/mlocati/gettext-iconv-windows/releases/download/v0.19.8.
 cmake --version
 msbuild /version
 which perl.exe
-which 7za.exe
 which 7z.exe
 
 echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
 
 
-7z.exe a -t7z -r qt_tools.7z C:\Qt\Tools\*
 
-appveyor PushArtifact qt_tools.7z
+7z.exe a -t7z -r qt_5_7_1_msvc2015_64.7z C:\Qt\5.7\msvc2015_64\*
+
+appveyor PushArtifact qt_5_7_1_msvc2015_64.7z
