@@ -33,7 +33,7 @@ if [%PLATFORM%] == [x64] set BOOST_LIBRARYDIR=%BOOST_LIBRARYDIR_WIN64%
 if [%PLATFORM%] == [x64] set CMAKE_GENERATOR=Visual Studio 14 2015 Win64   
 
 
-wget https://github.com/mlocati/gettext-iconv-windows/releases/download/v0.19.8.1-v1.14/gettext0.19.8.1-iconv1.14-shared-32.zip
+rem wget https://github.com/mlocati/gettext-iconv-windows/releases/download/v0.19.8.1-v1.14/gettext0.19.8.1-iconv1.14-shared-32.zip
     
 
 cmake --version
@@ -58,7 +58,7 @@ appveyor PushArtifact qt_5_7_1_msvc2015_64.7z
 
 
 
-7z.exe a -t7z -r directx_sdk.7z "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\*"
+7z.exe a -t7z -r directx_sdk_june_2010.7z "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\*"
 appveyor PushArtifact directx_sdk_june_2010.7z
 
 
