@@ -1,6 +1,14 @@
+echo dir /a:d /b C:\
 dir /a:d /b C:\
+
+echo dir /a:d /b C:\Libraries
 dir /a:d /b C:\Libraries
+
+
+echo dir /a:d /b "C:\Program Files (x86)"
 dir /a:d /b "C:\Program Files (x86)"
+
+echo dir /a:d /b "C:\Program Files" 
 dir /a:d /b "C:\Program Files"  
 
 set ROOT_DIRECTORY=%CD%
@@ -37,7 +45,20 @@ echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
 
 
+if exist "C:\Program Files (x86)\Microsoft SDKs" ( dir "C:\Program Files (x86)\Microsoft SDKs" )
+if exists "C:\Program Files\Microsoft SDKs" ( dir "C:\Program Files\Microsoft SDKs" )
 
-7z.exe a -t7z -r qt_5_7_1_msvc2015_64.7z C:\Qt\5.7\msvc2015_64\*
 
+rem 7z.exe a -t7z -r qt_5_7_1_msvc2015_64.7z C:\Qt\5.7\msvc2015_64\*
+rem appveyor PushArtifact qt_5_7_1_msvc2015_64.7z
+
+
+7z.exe a -t7z -r qt_5_7_1_msvc2015.7z C:\Qt\5.7\msvc2015\*
 appveyor PushArtifact qt_5_7_1_msvc2015_64.7z
+
+
+
+7z.exe a -t7z -r directx_sdk.7z "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\*"
+appveyor PushArtifact directx_sdk_june_2010.7z
+
+
