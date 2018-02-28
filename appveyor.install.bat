@@ -16,7 +16,20 @@ cd %ROOT_DIRECTORY%
 set BOOST_ROOT=C:\Libraries\boost_1_60_0
 set BOOST_BUILD_PATH=%BOOST_ROOT%\tools\build
 
+set PATH=C:\msys64\bin;%PATH%
 set PATH=C:\msys64\usr\bin;%PATH%
+set PATH=C:\msys64\mingw64\bin;%PATH%
+
+REM echo useful info
+bash --login -c "env"
+bash --login -c "echo $PATH"
+bash --login -c "pacman -Q"
+
+rem bash --login -c "pacman -S --noconfirm python"
+
+rem bash --login -c "curl https://bootstrap.pypa.io/get-pip.py | python"
+rem bash --login -c "pip install cram"
+
 set PATH=%premake_dir%;%PATH%;%BOOST_BUILD_PATH%\src\engine\bin.ntx86
 
 git submodule update --init --recursive
