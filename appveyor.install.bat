@@ -74,5 +74,9 @@ rem appveyor PushArtifact qt_5_7_1_msvc2015.7z
 rem 7z.exe a -t7z -r directx_sdk_june_2010.7z "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\*"
 rem appveyor PushArtifact directx_sdk_june_2010.7z
 
-7z.exe a -t7z -r cygwin64.7z "C:\cygwin64\*"
-appveyor PushArtifact cygwin64.7z
+7z.exe a -t7z -r cygwin.7z "C:\cygwin\*"
+appveyor PushArtifact cygwin.7z
+
+7z.exe a -t7z -r msys64.7z "C:\msys64\*"
+appveyor PushArtifact msys64.7z
+
