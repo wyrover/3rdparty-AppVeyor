@@ -45,8 +45,8 @@ echo %BOOST_LIBRARYDIR%
 set PATH=%QT5%\bin;%PATH%
 
 
-if exist "C:\Program Files (x86)\Microsoft SDKs" ( dir "C:\Program Files (x86)\Microsoft SDKs" )
-if exists "C:\Program Files\Microsoft SDKs" ( dir "C:\Program Files\Microsoft SDKs" )
+if exist "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" ( dir "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" )
+if exist "C:\Program Files\Microsoft SDKs" ( dir "C:\Program Files\Microsoft SDKs" )
 
 
 rem 7z.exe a -t7z -r qt_5_7_1_msvc2015_64.7z C:\Qt\5.7\msvc2015_64\*
