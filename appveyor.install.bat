@@ -91,7 +91,7 @@ rem appveyor PushArtifact MinGW.7z
 :install_ninja
 
 mkdir C:\projects\deps
-set NINJA_URL="https://github.com/ninja-build/ninja/releases/download/v1.6.0/ninja-win.zip"
+set NINJA_URL="https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-win.zip"
 
 wget %NINJA_URL% -o ninja.zip
 7z x ninja.zip -oC:\projects\deps\ninja > nul
