@@ -80,11 +80,21 @@ rem appveyor PushArtifact cygwin.7z
 rem 7z.exe a -t7z -r msys64.7z "C:\msys64\*"
 rem appveyor PushArtifact msys64.7z
 
-7z.exe a -t7z -r mingw-w64.7z "C:\mingw-w64\*"
-appveyor PushArtifact mingw-w64.7z
+rem 7z.exe a -t7z -r mingw-w64.7z "C:\mingw-w64\*"
+rem appveyor PushArtifact mingw-w64.7z
 
-7z.exe a -t7z -r MinGW.7z "C:\MinGW\*"
-appveyor PushArtifact MinGW.7z
+rem 7z.exe a -t7z -r MinGW.7z "C:\MinGW\*"
+rem appveyor PushArtifact MinGW.7z
 
 
 
+:install_ninja
+
+mkdir C:\projects\deps
+set NINJA_URL="https://github.com/ninja-build/ninja/releases/download/v1.6.0/ninja-win.zip"
+
+wget %NINJA_URL% -o ninja.zip
+7z x ninja.zip -oC:\projects\deps\ninja > nul
+set PATH=C:\projects\deps\ninja;%PATH%
+
+ninja --version
