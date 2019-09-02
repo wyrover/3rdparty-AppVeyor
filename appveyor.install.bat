@@ -61,6 +61,13 @@ set PATH=%QT5%\bin;%PATH%
 if exist "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" ( dir "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" )
 if exist "C:\Program Files\Microsoft SDKs\Windows" ( dir "C:\Program Files\Microsoft SDKs\Windows" )
 
+git config --global core.longpaths true
+cd ..
+md electron-gn && cd electron-gn
+gclient config --name "src/electron" --unmanaged https://github.com/electron/electron
+gclient sync --with_branch_heads --with_tags
+
+
 
 rem 7z.exe a -t7z -r qt_5_7_1_msvc2015_64.7z C:\Qt\5.7\msvc2015_64\*
 rem appveyor PushArtifact qt_5_7_1_msvc2015_64.7z
@@ -90,11 +97,11 @@ rem appveyor PushArtifact MinGW.7z
 
 :install_ninja
 
-mkdir C:\projects\deps
-set NINJA_URL="https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-win.zip"
+rem mkdir C:\projects\deps
+rem set NINJA_URL="https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-win.zip"
 
-wget %NINJA_URL% -o ninja.zip
-7z x ninja.zip -oC:\projects\deps\ninja > nul
-set PATH=C:\projects\deps\ninja;%PATH%
+rem wget %NINJA_URL% -o ninja.zip
+rem 7z x ninja.zip -oC:\projects\deps\ninja > nul
+rem set PATH=C:\projects\deps\ninja;%PATH%
 
-ninja --version
+rem ninja --version
