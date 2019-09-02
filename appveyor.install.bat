@@ -69,6 +69,8 @@ wget https://storage.googleapis.com/chrome-infra/depot_tools.zip
 
 dir C:\depot_tools
 
+set PATH=C:\depot_tools;%PATH%
+
 
 cd ..
 md electron-gn && cd electron-gn
