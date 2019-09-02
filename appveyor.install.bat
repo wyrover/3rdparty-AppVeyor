@@ -1,19 +1,10 @@
-echo dir /a:d /b C:\
-dir /a:d /b C:\
-
-echo dir /a:d /b C:\Libraries
-dir /a:d /b C:\Libraries
-
-
-echo dir /a:d /b "C:\Program Files (x86)"
-dir /a:d /b "C:\Program Files (x86)"
-
-echo dir /a:d /b "C:\Program Files" 
-dir /a:d /b "C:\Program Files"  
 
 set ROOT_DIRECTORY=%CD%
 cd %ROOT_DIRECTORY%
 
+set PATH=C:\msys64\bin;%PATH%
+set PATH=C:\msys64\usr\bin;%PATH%
+set PATH=C:\msys64\mingw64\bin;%PATH%
 
 git submodule update --init --recursive
 
