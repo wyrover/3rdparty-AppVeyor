@@ -62,6 +62,10 @@ if exist "C:\Program Files (x86)\Microsoft SDKs\Windows Kits" ( dir "C:\Program 
 if exist "C:\Program Files\Microsoft SDKs\Windows" ( dir "C:\Program Files\Microsoft SDKs\Windows" )
 
 git config --global core.longpaths true
+
+wget https://storage.googleapis.com/chrome-infra/depot_tools.zip
+
+
 cd ..
 md electron-gn && cd electron-gn
 gclient config --name "src/electron" --unmanaged https://github.com/electron/electron
