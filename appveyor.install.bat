@@ -65,6 +65,10 @@ git config --global core.longpaths true
 
 wget https://storage.googleapis.com/chrome-infra/depot_tools.zip
 
+7z e depot_tools.zip
+
+dir
+
 
 cd ..
 md electron-gn && cd electron-gn
