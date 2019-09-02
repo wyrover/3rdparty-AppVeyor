@@ -65,9 +65,9 @@ git config --global core.longpaths true
 
 wget https://storage.googleapis.com/chrome-infra/depot_tools.zip
 
-7z e depot_tools.zip
+7z x depot_tools.zip -oC:\depot_tools
 
-dir
+dir C:\depot_tools
 
 
 cd ..
