@@ -88,5 +88,9 @@ rem appveyor PushArtifact MinGW.7z
 
 
 
+7z.exe a -t7z -r boost_1_58_0.7z "C:\Libraries\boost_1_58_0\*"
+appveyor PushArtifact boost_1_58_0.7z
+
+
 :install_ninja
 
