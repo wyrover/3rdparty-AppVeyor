@@ -1,13 +1,54 @@
+echo -----------------------------------------------
+echo dir /a:d /b D:\ 2>nul
+dir /a:d /b D:\ 2>nul
+
+echo -----------------------------------------------
+echo dir /a:d /b E:\ 2>nul
+dir /a:d /b E:\ 2>nul
+
+echo -----------------------------------------------
 echo dir /a:d /b C:\
 dir /a:d /b C:\
 
+echo -----------------------------------------------
 echo dir /a:d /b C:\Libraries
 dir /a:d /b C:\Libraries
 
 
+echo -----------------------------------------------
+echo dir /a:d /b C:\Tools
+dir /a:d /b C:\Tools
+
+
+echo -----------------------------------------------
+echo dir /a:d /b C:\WinDDK
+dir /a:d /b C:\WinDDK
+
+echo -----------------------------------------------
+echo dir /a:d /b C:\Users
+dir /a:d /b C:\Users
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Program Files (x86)\Java"
+dir /a:d /b "C:\Program Files (x86)\Java"
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Program Files\Java"
+dir /a:d /b "C:\Program Files\Java"
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Program Files (x86)\Microsoft SDKs"
+dir /a:d /b "C:\Program Files (x86)\Microsoft SDKs"
+
+echo -----------------------------------------------
+echo dir /a:d /b "C:\Program Files\Microsoft SDKs"
+dir /a:d /b "C:\Program Files\Microsoft SDKs"
+
+echo -----------------------------------------------
 echo dir /a:d /b "C:\Program Files (x86)"
 dir /a:d /b "C:\Program Files (x86)"
 
+echo -----------------------------------------------
 echo dir /a:d /b "C:\Program Files" 
 dir /a:d /b "C:\Program Files"  
 
@@ -88,8 +129,25 @@ rem appveyor PushArtifact MinGW.7z
 
 
 
-7z.exe a -t7z -r boost_1_58_0.7z "C:\Libraries\boost_1_58_0\*"
-appveyor PushArtifact boost_1_58_0.7z
+7z.exe a -t7z -r boost_1_69_0.7z "C:\Libraries\boost_1_69_0\*"
+appveyor PushArtifact boost_1_69_0.7z
+
+
+7z.exe a -t7z -r MongoDB.7z "C:\MongoDB\*"
+appveyor PushArtifact MongoDB.7z
+
+7z.exe a -t7z -r OpenSSL-v111-Win32.7z "C:\OpenSSL-v111-Win32\*"
+appveyor PushArtifact OpenSSL-v111-Win32.7z
+
+7z.exe a -t7z -r OpenSSL-v111-Win64.7z "C:\OpenSSL-v111-Win64\*"
+appveyor PushArtifact OpenSSL-v111-Win64.7z
+
+7z.exe a -t7z -r OpenSSL-Win32.7z "C:\OpenSSL-Win32\*"
+appveyor PushArtifact OpenSSL-Win32.7z
+
+7z.exe a -t7z -r OpenSSL-Win64.7z "C:\OpenSSL-Win64\*"
+appveyor PushArtifact OpenSSL-Win64.7z
+
 
 
 :install_ninja
