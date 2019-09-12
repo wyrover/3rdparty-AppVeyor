@@ -131,22 +131,22 @@ rem appveyor PushArtifact MinGW.7z
 
 7z.exe a -t7z -r boost_1_69_0.7z "C:\Libraries\boost_1_69_0\*"
 appveyor PushArtifact boost_1_69_0.7z
-
-
-7z.exe a -t7z -r MongoDB.7z "C:\MongoDB\*"
-appveyor PushArtifact MongoDB.7z
-
-7z.exe a -t7z -r OpenSSL-v111-Win32.7z "C:\OpenSSL-v111-Win32\*"
-appveyor PushArtifact OpenSSL-v111-Win32.7z
-
-7z.exe a -t7z -r OpenSSL-v111-Win64.7z "C:\OpenSSL-v111-Win64\*"
-appveyor PushArtifact OpenSSL-v111-Win64.7z
-
-7z.exe a -t7z -r OpenSSL-Win32.7z "C:\OpenSSL-Win32\*"
-appveyor PushArtifact OpenSSL-Win32.7z
-
-7z.exe a -t7z -r OpenSSL-Win64.7z "C:\OpenSSL-Win64\*"
-appveyor PushArtifact OpenSSL-Win64.7z
+::
+::
+::7z.exe a -t7z -r MongoDB.7z "C:\MongoDB\*"
+::appveyor PushArtifact MongoDB.7z
+::
+::7z.exe a -t7z -r OpenSSL-v111-Win32.7z "C:\OpenSSL-v111-Win32\*"
+::appveyor PushArtifact OpenSSL-v111-Win32.7z
+::
+::7z.exe a -t7z -r OpenSSL-v111-Win64.7z "C:\OpenSSL-v111-Win64\*"
+::appveyor PushArtifact OpenSSL-v111-Win64.7z
+::
+::7z.exe a -t7z -r OpenSSL-Win32.7z "C:\OpenSSL-Win32\*"
+::appveyor PushArtifact OpenSSL-Win32.7z
+::
+::7z.exe a -t7z -r OpenSSL-Win64.7z "C:\OpenSSL-Win64\*"
+::appveyor PushArtifact OpenSSL-Win64.7z
 
 
 
