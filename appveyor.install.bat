@@ -129,11 +129,15 @@ rem appveyor PushArtifact MinGW.7z
 
 
 
-7z.exe a -t7z -r JDK_12_(x64).7z "C:\Program Files\Java\jdk12\*"
-appveyor PushArtifact JDK_12_(x64).7z
+7z.exe a -t7z -r WinDDK.7z "C:\WinDDK\*"
+appveyor PushArtifact WinDDK.7z
 
-7z.exe a -t7z -r Maven_3.5.4.7z "C:\Program Files (x86)\Apache\Maven\*"
-appveyor PushArtifact Maven_3.5.4.7z
+7z.exe a -t7z -r MongoDB_4.0.1.7z "C:\MongoDB\*"
+appveyor PushArtifact MongoDB_4.0.1.7z
+
+7z.exe a -t7z -r MySQL_5.7.7z "C:\Program Files (x86)\MySQL\*"
+appveyor PushArtifact MySQL_5.7.7z
+
 
 
 ::7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
