@@ -138,10 +138,14 @@ rem appveyor PushArtifact MinGW.7z
 ::7z.exe a -t7z -r MySQL_5.7.7z "C:\Program Files (x86)\MySQL\*"
 ::appveyor PushArtifact MySQL_5.7.7z
 
+7z.exe a -t7z -r Tools.7z "C:\Tools\*"
+appveyor PushArtifact Tools.7z
 
 
-7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
-appveyor PushArtifact JDK_1.8_Update_221_(x86).7z
+
+
+::7z.exe a -t7z -r JDK_1.8_Update_221_(x86).7z "C:\Program Files (x86)\Java\jdk1.8.0\*"
+::appveyor PushArtifact JDK_1.8_Update_221_(x86).7z
 
 ::7z.exe a -t7z -r JDK_1.8_Update_221_(x64).7z "C:\Program Files\Java\jdk1.8.0\*"
 ::appveyor PushArtifact JDK_1.8_Update_221_(x64).7z
